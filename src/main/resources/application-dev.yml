@@ -1,0 +1,21 @@
+# mysql 主库
+master:
+  datasource:
+    url: jdbc:mysql://localhost:3308/sysuser?serverTimezone=GMT&useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+
+# mysql 从库
+slave:
+  datasource:
+    url: jdbc:mysql://localhost:3308/chat?serverTimezone=GMT&useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+
+mybatis:
+  type-aliases-package: com.zoro.springboot.readwrite.separation.model
+
+server:
+  port: 7000
